@@ -18,23 +18,27 @@ Kullanıcılar, izledikleri filmlere verdikleri puanlarla ya da başlangıçta s
 - 💡 İçerik tabanlı filtreleme yöntemi kullanılmıştır
 - 🧠 Basit yapay zeka mantığına dayalı öneri motoru içerir
 - 🌐 React tabanlı kullanıcı dostu arayüz
+- - 🔗 Node.js tabanlı backend API desteği
 
 ---
 
 ## ⚙️ Kullanılan Teknolojiler
 
-### Frontend:
-- **React** (Vite ile hızlı yapılandırma)
-- **Tailwind CSS** (stil yönetimi için)
-- **Axios** (API istekleri için)
-- **React Router** (sayfa yönlendirmeleri için)
+### 🖥️ Frontend
+- **React** (Vite ile yapılandırılmış)
+- **Tailwind CSS** (stil yönetimi)
+- **Axios** (API istekleri)
+- **React Router** (sayfa geçişleri)
 
-### Backend:
-- **JSON veri yapısı** ile statik veriler veya sahte API
+### 🌐 Backend
+- **Node.js & Express**
+- **MongoDB** (muhtemelen veri saklama için)
+- **dotenv** (çevresel değişkenler için)
+- **Custom API Routes** 
 
-### Öneri Sistemi:
-- **İçerik Tabanlı Filtreleme (Content-Based Filtering)** algoritması
-- **JavaScript** ile yazılmış öneri fonksiyonları
+### 🧠 Öneri Sistemi
+- **İçerik Tabanlı Filtreleme (Content-Based Filtering)**
+- Öneri algoritmaları
 
 ---
 
@@ -70,26 +74,31 @@ Kullanıcının beğendiği filmlerden, hangi türleri daha çok sevdiği anlaş
 
 ---
 
-## 📁 Proje Dosya Yapısı
+## 📁 Proje Klasör Yapısı
 
 ```plaintext
-film-dizi-oneri-sitesi/
+film-dizi-oneri-sistemi/
 │
-├── backend/                  → FastAPI backend
-│   ├── main.py               → API'nin giriş noktası
-│   ├── recommendation.py     → Öneri algoritmasını içeren dosya
-│   ├── utils.py              → Yardımcı fonksiyonlar
-│   ├── data/                 → CSV veri dosyaları (filmler, puanlar, vs.)
-│   └── requirements.txt      → Python bağımlılıklarını listeler
+├── backend/                   → Node.js tabanlı API
+│   ├── models/                → Mongoose modelleri (varsa)
+    ├── node.modules          
+│   ├── routes/               → API endpoint'leri
+│   ├── import_movies.js      → Film verisi içe aktarma
+│   ├── insert.js / delete.js → DB işlemleri
+│   ├── index.js              → Ana backend uygulaması
+│   └── .env                  → Ortam değişkenleri
 │
-├── frontend/                 → React tabanlı kullanıcı arayüzü
-│   ├── src/
-│   │   ├── components/       → Bileşenler (film kartları, navbar, vs.)
-│   │   ├── pages/            → Sayfa yapıları (Ana sayfa, öneriler vs.)
-│   │   ├── App.jsx           → Uygulama kök bileşeni
-│   │   └── main.jsx          → React DOM başlangıç dosyası
-│   └── package.json          → Frontend bağımlılık ve script tanımları
+├── Frontend/                 → React arayüzü
+│   ├── public/              → Statik dosyalar
+│   ├── src/                 → React bileşenleri ve öneri sistemi
+│   │   ├── components/      → UI bileşenleri
+│   │   ├── pages/           → Sayfa bileşenleri
+│   │   └── utils/           → Öneri fonksiyonları
+│   └── package.json         → Frontend bağımlılıkları
 │
-└── README.md                 → Proje açıklaması ve kullanım bilgileri (bu dosya)
+├── README.md                 → Bu dökümantasyon dosyası
+├── .env                      → Ortak ortam değişkenleri
+├── .gitignore
+└── package.json              → Proje bağımlılıkları (root)
 
 
