@@ -18,28 +18,23 @@ Kullanıcılar, izledikleri filmlere verdikleri puanlarla ya da başlangıçta s
 - 💡 İçerik tabanlı filtreleme yöntemi kullanılmıştır
 - 🧠 Basit yapay zeka mantığına dayalı öneri motoru içerir
 - 🌐 React tabanlı kullanıcı dostu arayüz
-- 🔗 Flask ile geliştirilen API desteği
 
 ---
 
 ## ⚙️ Kullanılan Teknolojiler
 
 ### Frontend:
-- React (Vite ile kuruldu)
-- Tailwind CSS (stil yönetimi)
-- Axios (API istekleri için)
-- React Router (sayfa yönlendirmeleri için)
+- **React** (Vite ile hızlı yapılandırma)
+- **Tailwind CSS** (stil yönetimi için)
+- **Axios** (API istekleri için)
+- **React Router** (sayfa yönlendirmeleri için)
 
 ### Backend:
-- Python
-- FastAPI (RESTful API servisi için)
-- Pandas (veri işleme)
-- Scikit-learn (öneri algoritması)
-- Uvicorn (FastAPI server)
-- CORS Middleware
+- **JSON veri yapısı** ile statik veriler veya sahte API
 
-### Veri:
-- CSV dosyaları (filmler, kullanıcı puanları, türler vb.)
+### Öneri Sistemi:
+- **İçerik Tabanlı Filtreleme (Content-Based Filtering)** algoritması
+- **JavaScript** ile yazılmış öneri fonksiyonları
 
 ---
 
@@ -68,20 +63,10 @@ Kullanıcının beğendiği filmlerden, hangi türleri daha çok sevdiği anlaş
 | Katman           | Teknoloji            |
 |------------------|----------------------|
 | Frontend         | React.js             |
-| Backend          | Flask (Python)       |
+| Backend          | Flask                |
 | Yapay Zeka       | İçerik tabanlı filtreleme (Content-based) |
 | Veri formatı     | JSON                 |
 | Styling          | CSS / Tailwind / Bootstrap (isteğe bağlı) |
-
----
-
-## 🖥️ Kurulum ve Çalıştırma
-
-### 1. Backend (FastAPI)
-
-#### ✅ Gereksinimler
-- Python 3.8+
-- pip (Python package manager)
 
 ---
 
